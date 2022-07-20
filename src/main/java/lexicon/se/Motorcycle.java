@@ -6,7 +6,10 @@ public class Motorcycle extends Vehicle {
     private int maxSpeed;
     private String type;
 
-    public Motorcycle(Double fuelConsumption, int maxSpeed, String type) {
+
+
+    public Motorcycle(int vehicleId, String registrationNumber, String brand, Double fuelConsumption, int maxSpeed, String type) {
+        super(vehicleId, registrationNumber, brand);
         this.fuelConsumption = fuelConsumption;
         this.maxSpeed = maxSpeed;
         this.type = type;
@@ -14,7 +17,16 @@ public class Motorcycle extends Vehicle {
 
     @Override
     public void derive() {
-        System.out.println(type+" is a "+fuelConsumption+"and consumes"+fuelConsumption);
+        System.out.println("youngsters like to ride them with maxSpeed of "+maxSpeed);
 
+    }
+
+    @Override
+    public String toString() {
+        return "Motorcycle{" +
+                "fuelConsumption=" + fuelConsumption +
+                ", maxSpeed=" + maxSpeed +
+                ", type='" + type + '\'' +
+                '}';
     }
 }
