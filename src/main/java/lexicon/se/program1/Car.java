@@ -1,5 +1,6 @@
-package lexicon.se;
-import java.util.*;
+package lexicon.se.program1;
+import lexicon.se.program1.Vehicle;
+
 public class Car extends Vehicle {
 
     private int numberOfDoors;

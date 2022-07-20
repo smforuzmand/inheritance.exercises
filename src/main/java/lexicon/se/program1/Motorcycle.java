@@ -1,4 +1,6 @@
-package lexicon.se;
+package lexicon.se.program1;
+
+import lexicon.se.program1.Vehicle;
 
 public class Motorcycle extends Vehicle {
 
