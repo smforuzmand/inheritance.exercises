@@ -9,6 +9,13 @@ public class ChildBook extends Book implements Loanable{
         this.setCategory(Category.CHILD);
     }
 
+    public ChildBook(int page) {
+        super(page);
+    }
+
+    public ChildBook(String title, String authorName, LocalDate years) {
+        super(title, authorName, years);
+    }
 
     @Override
     public void loan() {
