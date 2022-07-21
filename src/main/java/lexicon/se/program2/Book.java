@@ -3,30 +3,75 @@ package lexicon.se.program2;
 import java.time.LocalDate;
 
 public class Book {
-    String title;
-    String authorName;
-    LocalDate years;
-    int page;
+    private String title;
+    private String authorName;
+    private LocalDate years;
+    private int pages;
 
-    public enum category {ADULT, NON_LOANABLE, CHILD}
+    private Category category;
 
-    ;
+    public Book() {
 
-category category1 = category.CHILD;
-category category2=category.ADULT;
-category category3 = category.NON_LOANABLE;
+    }
 
+    public String getTitle() {
+        return title;
+    }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
 
+    public String getAuthorName() {
+        return authorName;
+    }
 
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    public LocalDate getYears() {
+        return years;
+    }
+
+    public void setYears(LocalDate years) {
+        this.years = years;
+    }
+
+    public int getPages() {
+        return pages;
+    }
+
+    public void setPages(int pages) {
+        this.pages = pages;
+    }
 
     public Book(int page) {
-        this.page = 100;
+        this.pages = 100;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 
     public Book(String title, String authorName, LocalDate years) {
         this.title = title;
         this.authorName = authorName;
         this.years = years;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + title + '\'' +
+                ", authorName='" + authorName + '\'' +
+                ", years=" + years +
+                ", pages=" + pages +
+                ", category=" + category +
+                '}';
     }
 }
